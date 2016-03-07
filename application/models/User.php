@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class User extends CI_Model {
+class user extends CI_Model {
 
   public function create($post) {
     $query = "INSERT INTO users (name, alias, email, dob, password, created_at, updated_at) VALUES (?,?,?,?,?,NOW(),NOW())";

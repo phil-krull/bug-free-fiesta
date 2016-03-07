@@ -1,11 +1,11 @@
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-$route['default_controller'] = "Users";
-$route['users'] = "Users/create";
-$route['users/pokes'] = "Pokes/show";
-$route['pokes/create/(:any)'] = "Pokes/create/$1";
-$route['sessions'] = "Sessions/create";
-$route['sessions/destroy'] = "Sessions/destroy";
+$route['default_controller'] = "users";
+$route['users'] = "users/create";
+$route['users/pokes'] = "pokes/show";
+$route['pokes/create/(:any)'] = "pokes/create/$1";
+$route['sessions'] = "sessions/create";
+$route['sessions/destroy'] = "sessions/destroy";
 $route['404_override'] = '';
 
 

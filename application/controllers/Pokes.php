@@ -1,9 +1,9 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Pokes extends CI_Controller {
+class pokes extends CI_Controller {
 
 	public function show() {
-		$this->load->model('Poke');
+		$this->load->model('poke');
 		// session user only;
 		$user = $this->Poke->show($this->session->userdata('id'));
 		// var_dump($user);
@@ -14,12 +14,12 @@ class Pokes extends CI_Controller {
 		// var_dump($users);
 		// die;
 
-		$this->load->view('Users/pokes', array('users' => $users, 'user' => $user));
+		$this->load->view('users/pokes', array('users' => $users, 'user' => $user));
 	}
 
 	public function create($user_id)
 	{
-		$this->load->model('Poke');
+		$this->load->model('poke');
 		$this->Poke->create($user_id, $this->session->userdata('id'));
 		redirect('/users/pokes');
 	}

@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Poke extends CI_Model {
+class poke extends CI_Model {
 
   public function index($user_id) {
     $query = "SELECT users.id, users.name,users.alias,users.email, count(pokes.user_id) AS pokes FROM users LEFT JOIN pokes ON users.id = pokes.user_id WHERE users.id != $user_id GROUP BY users.id ORDER BY users.alias ASC";

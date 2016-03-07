@@ -1,9 +1,9 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Sessions extends CI_Controller {
+class sessions extends CI_Controller {
 
   public function create() {
-    $this->load->model("User");
+    $this->load->model("user");
     $user = $this->User->login($this->input->post('email'));
 
     if ($user && password_verify($this->input->post('password'), $user['password'])) {
