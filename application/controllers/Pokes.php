@@ -5,12 +5,12 @@ class pokes extends CI_Controller {
 	public function show() {
 		$this->load->model('poke');
 		// session user only;
-		$user = $this->Poke->show($this->session->userdata('id'));
+		$user = $this->poke->show($this->session->userdata('id'));
 		// var_dump($user);
 		// die;
 
 		// for all users other than session user;
-		$users = $this->Poke->index($this->session->userdata('id'));
+		$users = $this->poke->index($this->session->userdata('id'));
 		// var_dump($users);
 		// die;
 
@@ -20,7 +20,7 @@ class pokes extends CI_Controller {
 	public function create($user_id)
 	{
 		$this->load->model('poke');
-		$this->Poke->create($user_id, $this->session->userdata('id'));
+		$this->poke->create($user_id, $this->session->userdata('id'));
 		redirect('/users/pokes');
 	}
 }

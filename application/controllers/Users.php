@@ -16,7 +16,7 @@ class users extends CI_Controller {
     $validation_result = $this->User->validate($this->input->post());
 
     if($validation_result == TRUE) {
-      $this->User->create($this->input->post());
+      $this->user->create($this->input->post());
       $this->session->set_flashdata('errors', 'Thank you for registering, please login to continue');
     } else {
       $this->session->set_flashdata('errors', validation_errors());
