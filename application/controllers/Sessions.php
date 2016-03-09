@@ -4,7 +4,7 @@ class sessions extends CI_Controller {
 
   public function create() {
     $this->load->model("user");
-    $user = $this->User->login($this->input->post('email'));
+    $user = $this->user->login($this->input->post('email'));
 
     if ($user && password_verify($this->input->post('password'), $user['password'])) {
       $user_info = array(

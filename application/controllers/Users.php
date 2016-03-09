@@ -13,7 +13,7 @@ class users extends CI_Controller {
   public function create() {
     $this->load->model('user');
     $this->load->library('form_validation');
-    $validation_result = $this->User->validate($this->input->post());
+    $validation_result = $this->user->validate($this->input->post());
 
     if($validation_result == TRUE) {
       $this->user->create($this->input->post());
